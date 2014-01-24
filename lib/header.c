@@ -9,6 +9,7 @@
 /* network byte order and is converted on the fly to host order. */
 
 #include "system.h"
+#include <errno.h>
 #include <netdb.h>
 #include <errno.h>
 #include <rpm/rpmtypes.h>
