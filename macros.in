@@ -340,8 +340,8 @@ package or when debugging this package.\
 #		"w7.xzdio"	xz level 7, xz's default.
 #		"w7.lzdio"	lzma-alone level 7, lzma's default
 #
-#%_source_payload	w9.gzdio
-#%_binary_payload	w9.gzdio
+#%_source_payload	w7.xzdio
+#%_binary_payload	w7.xzdio
 
 #	Algorithm to use for generating file checksum digests on build.
 #	If not specified or 0, MD5 is used.
