@@ -59,6 +59,8 @@ optflags: hppa2.0 -O2 -g -mpa-risc-1-0
 
 optflags: mips -O2 -g
 optflags: mipsel -O2 -g
+optflags: mips64 -O2 -g
+optflags: mips64el -O2 -g
 
 optflags: armv3l -O2 -g -march=armv3
 optflags: armv4b -O2 -g -march=armv4
@@ -129,6 +131,8 @@ archcolor: sh3 1
 archcolor: sh4 1
 
 archcolor: aarch64 2
+archcolor: mips64 2
+archcolor: mips 1
 
 #############################################################
 # Canonical arch names and numbers
@@ -218,6 +222,7 @@ arch_canon:	sh4: sh4	17
 arch_canon:	sh4a: sh4a	17
 arch_canon:	xtensa: xtensa	18
 arch_canon:	aarch64: aarch64 19
+arch_canon:	mips64:	mips64	20
 
 #############################################################
 # Canonical OS names and numbers
@@ -388,6 +393,9 @@ arch_compat: sparc: noarch
 arch_compat: mips: noarch
 arch_compat: mipsel: noarch
 
+arch_compat: mips64: mips noarch
+arch_compat: mips64el: mips noarch
+
 arch_compat: hppa2.0: hppa1.2
 arch_compat: hppa1.2: hppa1.1
 arch_compat: hppa1.1: hppa1.0
@@ -508,6 +516,8 @@ buildarch_compat: ppc64p7: ppc64
 
 buildarch_compat: mips: noarch
 buildarch_compat: mipsel: noarch
+buildarch_compat: mips64: mips noarch
+buildarch_compat: mipsel64: mips noarch
 
 buildarch_compat: armv4b: noarch
 buildarch_compat: armv7l: armv6l
