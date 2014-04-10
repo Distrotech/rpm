@@ -338,6 +338,8 @@ buildarchtranslate: sh4: sh4
 buildarchtranslate: sh4a: sh4
 
 buildarchtranslate: aarch64: aarch64
+buildarchtranslate: mips: mips
+buildarchtranslate: mips64: mips64
 
 #############################################################
 # Architecture compatibility
