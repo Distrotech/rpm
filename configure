@@ -647,6 +647,7 @@ WITH_INTERNAL_DB_FALSE
 WITH_INTERNAL_DB_TRUE
 subdirs
 RPMCONFIGDIR
+RUNDIR
 RPMCANONGNU
 RPMCANONOS
 RPMCANONVENDOR
@@ -931,6 +932,7 @@ with_lua
 enable_plugins
 with_dmalloc
 with_vendor
+with_rundir
 '
       ac_precious_vars='build_alias
 host_alias
@@ -1614,6 +1616,7 @@ Optional Packages:
   --with-lua              build with lua support
   --with-dmalloc          build with dmalloc debugging support
   --with-vendor=VENDOR    specify rpm vendor name
+  --with-rundir=RUNDIR    specify run-time variable directory
 
 Some influential environment variables:
   CC          C compiler command
@@ -24783,6 +24786,20 @@ _ACEOF
 RPMCANONOS="$host_os_noversion"
 RPMCANONGNU="$host_os_gnu"
 
+
+
+
+RUNDIR="/run"
+
+# Check whether --with-rundir was given.
+if test "${with_rundir+set}" = set; then :
+  withval=$with_rundir; RUNDIR=$withval
+fi
+
+
+cat >>confdefs.h <<_ACEOF
+#define RUNDIR "${RUNDIR}"
+_ACEOF
 
 
 
